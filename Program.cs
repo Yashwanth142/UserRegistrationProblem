@@ -7,7 +7,9 @@ namespace UserRegistration
         
         public static void Main(String[] args)
         {
-            Console.WriteLine("Welcome");
+            Console.WriteLine("User Registration");
+            UserDetails user = new UserDetails();
+            user.UserDetail();
 
         }
     }
