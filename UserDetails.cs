@@ -13,7 +13,7 @@ namespace UserRegistration
         public static string Reg_pattern2 = "^[A-Z]{1}[a-z]{2}[a-z]+$";
         public static string Reg_pattern3 = "^[a-zA-Z]{1}[a-zA-Z0-9+_.-]+[@]{1}[a-zA-Z]+[.]{1}(co)([.][a-z]{2,})?$";
         public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
-        public static string Reg_pattern5 = "^[a-zA-Z]{8,}([0-9]+)?$";
+        public static string Reg_pattern5 = "^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$";
         public void UserDetail()
         {
             Console.WriteLine("Enter your First name : ");
