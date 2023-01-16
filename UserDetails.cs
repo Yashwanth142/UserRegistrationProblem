@@ -11,14 +11,15 @@ namespace UserRegistration
     {
         public static string Reg_pattern1 = "^[A-Z]{1}[a-z]{2}[a-z]+$";
         public static string Reg_pattern2 = "^[A-Z]{1}[a-z]{2}[a-z]+$";
-        public static string Reg_pattern3 = "^[a-zA-Z]+[@]{1}[a-zA-Z]+[.]{1}[a-z]{3}$";
-        public static string Reg_pattern4 = "^(91)[0-9]{10}$";
+        public static string Reg_pattern3 = "^[a-zA-Z]{1}[a-zA-Z0-9+_.-]+[@]{1}[a-zA-Z]+[.]{1}(co)([.][a-z]{2,})?$";
+        public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
         public void UserDetail()
         {
             Console.WriteLine("Enter your First name : ");
             string fname = Console.ReadLine(); 
             Console.WriteLine("Enter your Last name : ");
             string lname = Console.ReadLine();
+            
             Console.WriteLine("Enter your Email : ");
             string em = Console.ReadLine();
             Console.WriteLine("Enter your Phone number : ");
