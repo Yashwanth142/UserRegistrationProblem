@@ -80,7 +80,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase8()
         {
-            string password = "Yashwanth$9";
+            string password = "Yashwath$9";
             bool expected = true;
             demo program = new demo();
             bool actual = program.validpwd(password);
