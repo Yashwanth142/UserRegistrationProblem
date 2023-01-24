@@ -47,7 +47,7 @@ namespace UserRegistration
             }
             catch (InvalidException e)
             {
-                Console.WriteLine("Oops {0} ! ", e.Message);
+                Console.WriteLine("Invalid {0} ! ", e.Message);
             }
 
             try
@@ -56,7 +56,7 @@ namespace UserRegistration
             }
             catch (InvalidException e)
             {
-                Console.WriteLine("Oops {0} ! ", e.Message);
+                Console.WriteLine("Invalid {0} ! ", e.Message);
             }
 
             try
@@ -65,7 +65,7 @@ namespace UserRegistration
             }
             catch (InvalidException e)
             {
-                Console.WriteLine("Oops {0} ! ", e.Message);
+                Console.WriteLine("Invalid {0} ! ", e.Message);
             }
 
             try
@@ -74,150 +74,50 @@ namespace UserRegistration
             }
             catch (InvalidException e)
             {
-                Console.WriteLine("Oops {0} ! ", e.Message);
+                Console.WriteLine("Invalid {0} ! ", e.Message);
             }
-
         }
     }
     public class demo
     {
-    public Regex Reg_pattern1 = new Regex(@"^[A-Z]{1}[A-Za-z]{2,}$");
-    public Regex Reg_pattern2 = new Regex(@"^[A-Z]{1}[A-Za-z]{2,}$");
-    public Regex Reg_pattern3 = new Regex(@"^[A-Za-z0-9]+([.+-][A-Za-z0-9]+)*@[A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2,})?$");
-    public Regex Reg_pattern4 = new Regex(@"^[0-9]{2}\s[0-9]{10}$");
-    public Regex Reg_pattern5 = new Regex(@"^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$");
-    public Regex Reg_pattern5_1 = new Regex(@"^[a-zA-Z]{8,}([0-9]+)?$");
-    public Regex Reg_pattern5_2 = new Regex(@"^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$");
-    public Regex Reg_pattern5_3 = new Regex(@"^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}([0-9]+)?$");
-
-    //public static string Reg_pattern1 = "^[A-Z]{1}[A-Za-z]{2,}$";
-    //public static string Reg_pattern2 = "^[A-Z]{1}[A-Za-z]{2,}$";
-    //public static string Reg_pattern3 = "^[A-Za-z0-9]+([.+-][A-Za-z0-9]+)*@[A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2,})?$";
-    //public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
-
-    //public static string Reg_pattern5 = "^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$";
-    //public static string Reg_pattern5_1 = "^[a-zA-Z]{8,}([0-9]+)?$";
-    //public static string Reg_pattern5_2 = "^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$";
-    //public static string Reg_pattern5_3 = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}([0-9]+)?$";
-    public bool validname(string name)
-        {
-            bool val1 = Regex.IsMatch(name, Reg_pattern1);
-            if (val1)
-            {
-                Console.WriteLine("Pattern is correct for given First name: {0}", name);
-                return true;
-            }
-
-            else
-            {
-                Console.WriteLine("pattern First name is wrong");
-                return false;
-            }
-        }
+        public Regex Reg_pattern1 = new Regex(@"^[A-Z]{1}[A-Za-z]{2,}$");
+        public Regex Reg_pattern2 = new Regex(@"^[A-Z]{1}[A-Za-z]{2,}$");
+        public Regex Reg_pattern3 = new Regex(@"^[A-Za-z0-9]+([.+-][A-Za-z0-9]+)*@[A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2,})?$");
+        public Regex Reg_pattern4 = new Regex(@"^[0-9]{2}\s[0-9]{10}$");
+        public Regex Reg_pattern5 = new Regex(@"^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$");
+        public Regex Reg_pattern5_1 = new Regex(@"^[a-zA-Z]{8,}([0-9]+)?$");
+        public Regex Reg_pattern5_2 = new Regex(@"^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$");
+        public Regex Reg_pattern5_3 = new Regex(@"^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}([0-9]+)?$");
 
 
-        public bool validlname(string lname)
-        {
-            bool val2 = Regex.IsMatch(lname, Reg_pattern2);
-            if (val2)
-            {
-                Console.WriteLine("Pattern is correct for given Last name: {0}", lname);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern Last name is wrong");
-                return false;
-            }
-
-        }
 
 
-        public bool validmail(string mail)
-        {
-            bool val3 = Regex.IsMatch(mail, Reg_pattern3);
-            if (val3)
-            {
-                Console.WriteLine("Pattern is correct for given mail ID : {0}", mail);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern mail ID  is wrong");
-                return false;
-            }
-        }
 
-        public bool validmobile(string mb)
-        {
-            bool val4 = Regex.IsMatch(mb, Reg_pattern4);
-            if (val4)
-            {
-                Console.WriteLine("Pattern is correct for given mobile number : {0}", mb);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern mobile number  is wrong");
-                return false;
-            }
 
-        }
-        public bool validpwd1(string pwd)
-        {
-            bool val5 = Regex.IsMatch(pwd, Reg_pattern5_1);
-            if (val5)
-            {
-                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern password  is wrong");
-                return false;
-            }
-        }
-        public bool validpwd2(string pwd)
-        {
-            bool val5 = Regex.IsMatch(pwd, Reg_pattern5_2);
-            if (val5)
-            {
-                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern password  is wrong");
-                return false;
-            }
-        }
-        public bool validpwd3(string pwd)
-        {
-            bool val5 = Regex.IsMatch(pwd, Reg_pattern5_3);
-            if (val5)
-            {
-                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern password  is wrong");
-                return false;
-            }
-        }
-        public bool validpwd(string pwd)
-        {
-            bool val5 = Regex.IsMatch(pwd, Reg_pattern5);
-            if (val5)
-            {
-                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("pattern password  is wrong");
-                return false;
-            }
-        }
+        public string validname(string name) => Reg_pattern1.IsMatch(name) ? "First Name is valid" :
+            throw new InvalidException("invalid first name");
+
+
+        public string validlname(string lname) => Reg_pattern2.IsMatch(lname) ? "last Name is valid" :
+           throw new InvalidException("invalid last name");
+
+        public string validmail(string mail) => Reg_pattern3.IsMatch(mail) ? "mail is valid" :
+          throw new InvalidException("invalid mail");
+
+        public string validmobile(string mb) => Reg_pattern4.IsMatch(mb) ? "mobile is valid" :
+         throw new InvalidException("invalid mobile");
+
+        public string validpwd(string pwd) => Reg_pattern5.IsMatch(pwd) ? "password is valid" :
+        throw new InvalidException("invalid password");
+
+        public string validpwd1(string pwd) => Reg_pattern5_1.IsMatch(pwd) ? "password is valid" :
+       throw new InvalidException("invalid password");
+
+        public string validpwd2(string pwd) => Reg_pattern5_2.IsMatch(pwd) ? "password is valid" :
+       throw new InvalidException("invalid password");
+
+        public string validpwd3(string pwd) => Reg_pattern5_3.IsMatch(pwd) ? "password is valid" :
+       throw new InvalidException("invalid password");
+
     }
 }
