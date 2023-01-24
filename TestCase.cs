@@ -31,7 +31,7 @@ namespace RegexTestCase
         {
             try
             {
-                string lastname = "YashwanSks";
+                string lastname = "YashwanSs";
                 string expected = "last Name is valid";
                 demo program = new demo();
                 string actual = program.validlname(lastname);
